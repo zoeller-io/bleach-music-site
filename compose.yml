@@ -1,0 +1,14 @@
+services:
+
+  node:
+    image: node:21-alpine
+    container_name: ${PROJECT_NAME}_node
+    working_dir: /usr/app
+    user: "${UID}:${GID}"
+    volumes:
+      - .:/usr/app
+    networks:
+      - backend
+
+networks:
+  backend:

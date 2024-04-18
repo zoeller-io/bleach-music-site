@@ -11,5 +11,13 @@ tasks:
   cecil:build:
     desc: Builds the website.
     cmds:
+      - docker compose run node npm run build-dev
       - php cecil.phar build
     aliases: [build]
+
+  deploy:production:
+    cmds:
+      - docker compose run node npm run build-prod
+      - php cecil.phar build
+      - rsync -atvPI ./_site/ xxx:/opt/blch-web-prd/web
+    aliases: [deploy]
