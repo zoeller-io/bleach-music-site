@@ -19,5 +19,5 @@ tasks:
     cmds:
       - docker compose run node npm run build-prod
       - php cecil.phar build
-      - rsync -atvPI ./_site/ xxxx:/opt/blch-web-prd/web
+      - rsync -atvPI ./_site/ xxx:/opt/blch-web-prd/web
     aliases: [deploy]
