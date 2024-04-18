@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="canonical" href="https://www.bleach-music.de" />
+    <link rel="shortlink" href="https://www.bleach-music.de" />
+    <title>Bleach - Alternative Rock-Cover</title>
+    <script>
+      tailwind.config = {
+          theme: {
+              colors: {
+                  current: 'currentColor',
+                  transparent: 'transparent',
+
+                  black: '#000',
+                  white: '#fff',
+                  gray: {
+                      50: '#F6F6F6',
+                      100: '#E7E7E7',
+                      200: '#D1D1D1',
+                      300: '#B0B0B0',
+                      400: '#888888',
+                      500: '#6D6D6D',
+                      600: '#5D5D5D',
+                      700: '#4C4C4C',
+                      800: '#454545',
+                      900: '#3D3D3D',
+                  },
+                  blueGray: {
+                      50: '#F4F6F7',
+                      100: '#E4E7E9',
+                      200: '#CBD1D6',
+                      300: '#A7B0B9',
+                      400: '#7B8795',
+                      500: '#606C7A',
+                      600: '#535B67',
+                      700: '#474E57',
+                      800: '#3F434B',
+                      900: '#383C41',
+                  },
+                  red: {
+                      50: '#FFF1F1',
+                      100: '#FFDFDF',
+                      200: '#FFC5C5',
+                      300: '#FF9D9D',
+                      400: '#FF6464',
+                      500: '#FF1E1E',
+                      600: '#ED1515',
+                      700: '#C80D0D',
+                      800: '#A50F0F',
+                      900: '#881414',
+                  },
+                  green: {
+                      50: '#FDFFE4',
+                      100: '#F9FFC4',
+                      200: '#F1FF90',
+                      300: '#E2FF50',
+                      400: '#CCFF00',
+                      500: '#B2E600',
+                      600: '#8AB800',
+                      700: '#688B00',
+                      800: '#526D07',
+                      900: '#455C0B',
+                  },
+              },
+              backgroundColor: theme => ({
+                  ...theme('colors'),
+                  body: '#0E0F11',
+              }),
+              borderColor: theme => ({
+                  ...theme('colors'),
+                  DEFAULT: '#e5e7eb',
+              }),
+              fontFamily: {
+                  body: 'Arial, "Helvetica Neue", Helvetica, sans-serif;',
+                  heading: '"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;',
+                  sans: 'Arial, "Helvetica Neue", Helvetica, sans-serif;',
+                  serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+                  mono: '"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;',
+              },
+
+          }
+      }
+    </script>
+    <style type="text/tailwindcss">
+        /* Shuffle */
+
+        .custom-checkbox-1:checked + div {
+            @apply bg-green-500;
+            @apply border-green-500;
+        }
+
+        .custom-checkbox-1:checked + div svg {
+            @apply text-black opacity-100;
+            @apply block;
+        }
+
+        .custom-checkbox-2:checked + div {
+            @apply bg-green-500;
+            @apply border-green-500;
+        }
+
+        .custom-checkbox-2:checked + div svg {
+            @apply text-black opacity-100;
+            @apply block;
+        }
+
+        .custom-switch-1:checked + div {
+            @apply left-1/2;
+            @apply bg-black;
+        }
+
+        .custom-switch-2:checked + div > .w-full > .custom-switch-btn-1 {
+            @apply bg-transparent;
+            @apply text-gray-50;
+        }
+
+        .custom-switch-2:checked + div > .flex-1 > .custom-switch-btn-2 {
+            @apply bg-white;
+        }
+
+        .custom-switch-2:checked + div > .flex-1 > .custom-switch-btn-2 > p {
+            @apply text-black;
+        }
+
+        .custom-switch-2:checked + div > .flex-1 > .custom-switch-btn-2 > span {
+            @apply bg-green-500;
+            @apply text-black;
+        }
+
+        .custom-input-text-1:focus ~ label, .custom-input-text-1:valid ~ label {
+            @apply top-2;
+            @apply left-2.5;
+            transform: scale(0.75);
+        }
+
+        .custom-input-text-2:focus + svg {
+            @apply text-white;
+        }
+
+        .custom-input-password-1:focus ~ label, .custom-input-password-1:valid ~ label {
+            @apply top-2;
+            @apply left-3.5;
+            transform: scale(0.75);
+        }
+
+        .custom-input-text-3:focus ~ label, .custom-input-text-3:valid ~ label {
+            @apply top-2;
+            left: 17px;
+            transform: scale(0.75);
+        }
+
+        .custom-input-text-4:focus ~ label, .custom-input-text-4:valid ~ label {
+            @apply top-3;
+            left: 17px;
+            transform: scale(0.75);
+        }
+
+        .region-header .text-with-summary {
+            @apply text-left;
+        }
+
+        .region-header .text-with-summary p {
+            @apply text-2xl text-white tracking-tight leading-normal;
+        }
+
+        .region-content {
+            @apply container px-4 mx-auto;
+        }
+
+        .region-content .text-with-summary {
+            @apply text-center px-4 md:max-w-5xl mx-auto;
+        }
+
+        .region-content .text-with-summary p {
+            @apply mb-8 text-2xl text-white tracking-tight leading-normal;
+        }
+        h3 > a {
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body class="path-frontpage page-node-type-page bg-body">
+
+    <div class="">
+
+
+
+
+
+              <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
+<section class="relative overflow-hidden">
+  <div class="container px-4 mx-auto">
+    <div class="flex items-center justify-between pt-6 -m-2">
+      <div class="w-auto p-2">
+        <div class="flex flex-wrap items-center">
+          <div class="w-auto">
+            <a class="relative z-10 inline-block" href="/">
+              <img src="/images/logo-50h-t.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="w-auto p-2">
+        <div class="flex flex-wrap items-center">
+          <div class="w-auto hidden lg:block">
+            <ul class="flex items-center mr-12">
+            </ul></div>
+          <div class="w-auto hidden lg:block">
+            <div class="inline-block"><a class="inline-block px-8 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300" href="./kontakt">Kontakt</a></div>
+          </div>
+          <div class="w-auto lg:hidden">
+            <a class="relative z-10 inline-block" href="#">
+              <svg class="navbar-burger text-green-500" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="28" fill="currentColor"></rect><path d="M37 32H19M37 24H19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+    <nav class="relative z-10 px-9 pt-8 h-full overflow-y-auto"><div class="flex flex-wrap justify-between h-full">
+        <div class="w-full">
+          <div class="flex items-center justify-between -m-2">
+            <div class="w-auto p-2">
+              <a class="inline-block" href="#">
+                <img src="/images/logo-50h-t.png" alt=""></a>
+            </div>
+            <div class="w-auto p-2">
+              <a class="navbar-burger inline-block text-white" href="#">
+                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center py-16 w-full">
+          <ul>
+            <li class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="./kontakt">Kontakt</a></li>
+                                                          </ul></div>
+        <div class="flex flex-col justify-end w-full pb-8">
+                  </div>
+      </div>
+    </nav>
+  </div>
+  <div class="relative pt-14 pb-16">
+    <div class="relative z-10 container px-4 mx-auto">
+      <div class="flex flex-wrap lg:items-center -m-8">
+        <div class="w-full md:w-1/2 p-8">
+          <span class="inline-block mb-2.5 text-sm text-green-400 font-medium tracking-tighter">Handgemacht, routiniert und überzeugend</span>
+          <h1 class="mb-10 text-5xl lg:text-6xl xl:text-8xl text-white tracking-tighter font-heading">
+            <span>Bleach</span>
+            <span class="inline-block">
+                    <img class="inline-block pr-6" src="/images/star4.svg" alt=""><span>Alternative</span>
+                  </span>
+            <span>Rock-Cover</span>
+          </h1>
+          <div class="flex flex-wrap -m-2 mb-12">
+            <div class="w-auto p-2"><audio controls="" src="/media/171010_Bleach_Sample_Mix.mp3"></audio></div>
+          </div>
+                      <div class="region region-header">
+    <div class="text-with-summary">
+            <div class="field__item text-2xl"><p>Bleach - das ist nicht nur der Titel des legendären Debutalbums von Nirvana, sondern auch der Name der kompromisslosen Alternative Rock-Coverband aus dem Großraum Frankfurt.</p></div>
+        </div>
+
+
+  </div>
+
+                  </div>
+        <div class="w-full md:w-1/2 p-8">
+          <div class="max-w-max mx-auto md:mr-0">
+            <img src="/images/header.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="absolute top-0 left-0" src="/images/layer-blur.svg" alt=""></section>
+
+<section class="py-16 overflow-hidden"><div class="container px-4 mx-auto">
+    <div class="text-center">
+      <span class="inline-block mb-8 text-sm text-green-400 font-medium tracking-tighter">Bleach Stats</span>
+      <div class="flex flex-wrap -m-11">
+        <div class="w-full md:w-1/2 lg:w-1/4 p-11">
+          <div class="text-center">
+            <p class="mb-3 text-gray-300">Nächster Termin</p>
+            <h3 class="mb-1.5 text-5xl text-white tracking-3xl font-heading">04.05.</h3>
+            <p class="text-gray-300">Bürgerhaus Nieder-Florstadt / <br/>61197 Florstadt</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-11">
+          <div class="text-center">
+            <p class="mb-3 text-gray-300">Programm</p>
+            <h3 class="mb-1.5 text-5xl text-white tracking-3xl font-heading">150+</h3>
+            <p class="text-gray-300">Songs</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-11">
+          <div class="text-center">
+            <p class="mb-3 text-gray-300">Bühnenerfahrung</p>
+            <h3 class="mb-1.5 text-5xl text-white tracking-3xl font-heading">100+</h3>
+            <p class="text-gray-300">Jahre</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/4 p-11">
+          <div class="text-center">
+            <p class="mb-3 text-gray-300">Besetzung</p>
+            <h3 class="mb-1.5 text-5xl text-white tracking-3xl font-heading">6</h3>
+            <p class="text-gray-300" contenteditable="false">Bandmitglieder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+        <div class="region region-content">
+    <div id="block-bleach-music-content" class="block block-system block-system-main-block">
+
+
+
+<article data-history-node-id="1" class="node node--type-page node--view-mode-full">
+
+
+
+
+
+  <div class="node__content">
+    <div class="text-with-summary">
+            <div class="field__item text-2xl"><p>Bleach bietet die echte Alternative: NuRock, Independent und harter Alternative Rock - handgemacht, routiniert und überzeugend vorgetragen.</p><p>Im ca. 3-stündigen Programm finden sich Klassiker von Kultbands wie Rage Against the Machine, Alice in Chains, Faith No More und den Stone Temple Pilots. Alternative Tunes von Bands wie Bush, Foo Fighters, Red Hot Chili Peppers und Incubus sowie aktuellen Nu-Rock Heroen wie Linkin Park, Biffy Clyro, Papa Roach, Kings of Leon und Alter Bridge.</p><p>Auftritte im Rahmen von Hessen rockt, auf dem Frankfurter Museumsuferfest sowie in diversen Clubs im Rhein-Main-Gebiet haben Bleach den Ruf einer energetischen Live Band eingebracht. Bleach Live steht für pure Power und Spielfreude.</p></div>
+        </div>
+
+  </div>
+
+</article>
+
+  </div>
+<div class="views-element-container block block-views block-views-blockevent-teaser-list-block-1" id="block-bleach-music-views-block-event-teaser-list-block-1">
+  <section class="py-20 overflow-hidden">
+    <div class="container px-4 mx-auto">
+
+              <div class="md:max-w-4xl text-center mx-auto">
+          <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Bleach Live</span>
+          <h2
+            class="mb-12 text-5xl lg:text-6xl text-white tracking-5xl lg:tracking-6xl font-heading">Termine</h2>
+        </div>
+
+      <div class="relative max-w-5xl mx-auto overflow-hidden mb-20">
+        <div class="flex flex-wrap -m-2">
+
+{#                                                  <div class="w-full p-2">#}
+{#                <div class="p-12 border border-gray-900 rounded-5xl">#}
+{#                  <div class="flex flex-wrap items-center -m-2">#}
+{#                    <div class="w-full md:flex-1 p-2">#}
+{#                      <ul class="flex flex-wrap mb-3 -m-2">#}
+{#                        <li class="flex flex-wrap items-center p-2">#}
+{#                          <span class="mr-4 text-sm text-green-400">#}
+{#                            Fri 19.01.2024#}
+{#                          </span>#}
+{#                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">#}
+{#                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>#}
+{#                          </svg>#}
+{#                        </li>#}
+{#                        <li class="flex flex-wrap items-center text-gray-300 p-2">#}
+{#                          <span class="mr-4 text-sm text-gray-300">#}
+{#                            19:00 Uhr#}
+{#                          </span>#}
+{#                        </li>#}
+{#                      </ul>#}
+{#                          <a class="group inline-block mb-4" href="https://www.schanz-online.de/programm/102536-Bleach" target="_blank">#}
+{#                          <h3 class="text-3xl text-white tracking-3xl underline font-heading">#}
+{#                            Bleach Live / Schanz, Mühlheim am Main#}
+{#                          </h3>#}
+{#                        </a>#}
+{#                                            <p class="text-gray-300">#}
+{#                                                  <a class="underline" href="https://www.schanz-online.de/" target="_blank">#}
+{#                            Kulturhalle Schanz</a>,#}
+{#                                                                          63165#}
+{#                          Mühlheim am Main,#}
+{#                          Carl-Zeiss-Str. 6#}
+{#                                              </p>#}
+{#                    </div>#}
+{#                                          <div class="w-full md:w-auto p-2">#}
+{#                        <a class="flex md:justify-end" href="https://www.schanz-online.de/programm/102536-Bleach" target="_blank">#}
+{#                          <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">#}
+{#                            <path d="M7.79688 17.43L13.5019 11.725C14.1756 11.0512 14.1756 9.94873 13.5019 9.27498L7.79688 3.56998" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>#}
+{#                          </svg>#}
+{#                        </a>#}
+{#                      </div>#}
+{#                                      </div>#}
+{#                </div>#}
+{#              </div>#}
+
+                                        <div class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">
+                            Sa 04.05.2024
+                          </span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">
+                            19:30 Uhr
+                          </span>
+                        </li>
+                      </ul>
+                                              <div class="group inline-block mb-4">
+                          <h3 class="text-3xl text-white tracking-3xl font-heading">
+                              <a class="underline" href="https://www.seven-hell.de" target="_blank">Seven Hell</a> &amp; Bleach /
+                            <a class="underline" href="https://www.florstadt.de/kalender/veranstaltungen/2024/2024-05-04-2.-rocknacht-im-buergerhaus-nieder-florstadt/" target="_blank">Rocknight Florstadt</a>
+                          </h3>
+                        </div>
+                            <p class="text-gray-300">
+                                  Bürgerhaus Nieder-Florstadt,
+                                                          61197
+                          Florstadt,
+                          Freiher-vom-Stein-Str. 1
+                                              </p>
+                    </div>
+                                      </div>
+                </div>
+              </div>
+
+                                        <div class="w-full p-2">
+                <div class="p-12 border border-gray-900 rounded-5xl">
+                  <div class="flex flex-wrap items-center -m-2">
+                    <div class="w-full md:flex-1 p-2">
+                      <ul class="flex flex-wrap mb-3 -m-2">
+                        <li class="flex flex-wrap items-center p-2">
+                          <span class="mr-4 text-sm text-green-400">
+                            Sa 11.05.2024
+                          </span>
+                          <svg width="2" height="3" viewbox="0 0 2 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.806 2.5H0.574V0.554H1.806V2.5Z" fill="#9F9FA0"></path>
+                          </svg>
+                        </li>
+                        <li class="flex flex-wrap items-center text-gray-300 p-2">
+                          <span class="mr-4 text-sm text-gray-300">
+                            20:00 Uhr
+                          </span>
+                        </li>
+                      </ul>
+                      <div class="group inline-block mb-4">
+                          <h3 class="text-3xl text-white tracking-3xl font-heading">
+                              Bleach & <a class="underline" href="https://www.facebook.com/Bandoftheyeah/" target="_blank">Band of the Yeah</a> /
+                              <a class="underline" href="http://www.kranzplatzfest-wiesbaden.de/" target="_blank">Kranzplatzfest Wiesbaden</a>
+                          </h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Kranzplatz, 65183 Wiesbaden
+                          </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+      <section class="py-24 bg-blueGray-900 bg-opacity-30 overflow-hidden"><div class="mb-20 md:max-w-xl text-center mx-auto">
+          <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Bleach Feedback</span>
+          <h2 class="text-5xl lg:text-6xl text-white tracking-5xl lg:tracking-6xl font-heading">Presse</h2>
+        </div>
+        <div class="container px-4 mx-auto">
+          <div class="text-center md:max-w-5xl mx-auto">
+            <h2 class="font-heading mb-8 text-3xl text-white tracking-tighter leading-normal">"... Last, but not least waren da auch noch BLEACH aus Frankfurt mit einem brachialen Rock- und Hardcore-Programm. Die kraftvollen Jungs zeigten dem Mischer und dem Publikum, was unter 'voll auf die Zwölf' zu verstehen ist. Besonderer Höhepunkt im Auftritt von BLEACH waren aber die zwei Songs auf der Zielgeraden, als gerade eine Nummer von Alice In Chains in der Kuppel der Halle verschwand: 'Last Resort' von Papa Roach und zum Abschluss die 90er-Jahre-Hymne 'Killing In the Name' von Rage Against the Machine. Besonders das letzte Stück hat so einige Tücken und verlangt von den Interpreten einiges ab. Es will tight gerappt werden, der Druck muss stimmen UND man muss sich dazu noch gescheit auf der Bühne bewegen. All diese Punkte meisterten BLEACH vortrefflich und - hey! - das ist einfach 'ne geile Nummer..."</h2>
+            <h4 class="text-white font-medium tracking-tighter">Hessen Rockt</h4>
+            <span class="inline-block text-sm text-white">2009 im Hüttenwerk Michelstadt</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative py-24 overflow-hidden"><div class="container px-4 mx-auto">
+          <div class="mb-20 md:max-w-xl text-center mx-auto">
+            <span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Bleach Band</span>
+            <h2 class="text-5xl lg:text-6xl text-white tracking-5xl lg:tracking-6xl font-heading">Wir</h2>
+          </div>
+          <div class="flex flex-wrap -m-8">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/stephan.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading">Stephan</h3>
+                <span class="inline-block text-gray-300">Lead Vocals</span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/michael.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading">Michael</h3>
+                <span class="inline-block text-gray-300">Lead Guitar</span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/christoph.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading">Christoph</h3>
+                <span class="inline-block text-gray-300">Bass Guitar, Backing Vocals</span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/matthias.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading">Matthias</h3>
+                <span class="inline-block text-gray-300">Drums</span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/mischa.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading" contenteditable="false">Mischa</h3>
+                <span class="inline-block text-gray-300">Rhythm Guitar</span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+              <div class="text-center">
+                <img class="mb-9 mx-auto" src="/images/stefan.jpg" alt=""><h3 class="text-3xl mb-2 text-white font-heading">Stefan</h3>
+                <span class="inline-block text-gray-300">Turntables</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-16 overflow-hidden"><div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-between -m-8">
+            <div class="w-48 p-8">
+              <a href="/"><img src="/images/logo-50h-t.png" alt=""></a></div>
+            <div class="w-auto p-8">
+              <ul class="flex flex-wrap -m-5">
+                <li class="p-5"><a class="inline-block text-lg font-medium text-gray-300 hover:text-white transition duration-300" href="./kontakt">Kontakt</a></li>
+                <li class="p-5"><a class="inline-block text-lg font-medium text-gray-300 hover:text-white transition duration-300" href="./impressum">Impressum</a></li>
+{#                <li class="p-5"><a class="inline-block text-lg font-medium text-gray-300 hover:text-white transition duration-300" href="./datenschutz">Datenschutz</a></li>#}
+              </ul></div>
+                                                          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+
+  cecil:start:
+    desc: Start Cecil local server and watcher.
+    cmds:
+      - php cecil.phar serve
+    aliases: [start]
+
+  cecil:build:
+    desc: Builds the website.
+    cmds:
+      - php cecil.phar build
+    aliases: [build]
